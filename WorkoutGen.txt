@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.Random;
 class Main {
     
-    public static ArrayList<String> upperBody = new ArrayList<>(Arrays.asList("Back Rows", "Dips", "Alt. Press", "Push ups", "KB Cleans"));
+    public static ArrayList<String> upperBody = new ArrayList<>(Arrays.asList("Back rows", "Dips", "Alt. Press", "Push ups", "KB Cleans"));
 
     public static ArrayList<String> lowerBody = new ArrayList<>(Arrays.asList("Squats", "Power ups", "Lunges", "Deadlifts", "Full Cycle"));
 
