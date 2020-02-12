@@ -1,0 +1,40 @@
+import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.Random;
+class Main {
+    
+    public static ArrayList<String> upperBody = new ArrayList<>(Arrays.asList("Back Rows", "Dips", "Alt. Press", "Push ups", "KB Cleans"));
+
+    public static ArrayList<String> lowerBody = new ArrayList<>(Arrays.asList("Squats", "Power ups", "Lunges", "Deadlifts", "Full Cycle"));
+
+    public static ArrayList<String> core = new ArrayList<>(Arrays.asList("Crunches", "Sit ups", "Side dips", "Planks", "Bridges", "Leg Raises"));
+
+
+  public static ArrayList<String> subWorkoutGenerator(int x, ArrayList<String> work) {
+    Random rand = new Random();
+    ArrayList<String> subWorkout = new ArrayList();
+    for (int i = 0; i < x; i++) {
+      int p = rand.nextInt(work.size());
+      subWorkout.add(work.get(p));
+      work.remove(work.get(p));
+
+    }
+    return subWorkout;
+  }
+  public static ArrayList<String> workoutGenerator() {
+    ArrayList<String> workout = new ArrayList();
+    workout.addAll(subWorkoutGenerator(3, upperBody));
+    workout.addAll(subWorkoutGenerator(3, lowerBody));
+    workout.addAll(subWorkoutGenerator(3, core));
+    return workout;
+  }
+  
+
+  public static void main(String[] args) {
+
+    ArrayList<String> temp = workoutGenerator();
+    for(String s: temp) {
+      System.out.println(s);
+    }
+  }
+}
