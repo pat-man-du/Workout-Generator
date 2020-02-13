@@ -10,8 +10,6 @@ class Main {
     public static ArrayList<String> core = new ArrayList<>(Arrays.asList("Crunches", "Sit ups", "Side dips", "Planks", "Bridges", "Leg Raises"));
 
 
-//fixing error 691 in new branch
-
   public static ArrayList<String> subWorkoutGenerator(int x, ArrayList<String> work) {
     Random rand = new Random();
     ArrayList<String> subWorkout = new ArrayList();
